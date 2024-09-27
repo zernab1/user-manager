@@ -1,0 +1,71 @@
+{
+  "type": "module",
+  "name": "user-manager",
+  "version": "1.0.0",
+  "description": "A small full-stack application that allows users to submit a form with their name and email, which is stored in a database and displayed in a table on the front-end.",
+  "main": "index.js",
+"scripts": {
+  "client": "npm start --prefix client",
+  "server": "nodemon --watch server --exec \"node --loader ts-node/esm\" server/app.ts",
+  "start": "concurrently \"npm run server\" \"npm run client\"",
+  "build": "npm run build --prefix client",
+  "client:build": "npm run build --prefix client",
+  "test": "npm test --prefix client",
+  "eject": "npm run eject --prefix client"
+}
+,
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zernab1/user-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zernab1/user-manager/issues"
+  },
+  "homepage": "https://github.com/zernab1/user-manager#readme",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.112",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "axios": "^1.7.7",
+    "concurrently": "^9.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7",
+    "pg": "^8.13.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}
